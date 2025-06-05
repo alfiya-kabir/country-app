@@ -1,0 +1,96 @@
+.login-container {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form-side {
+  padding: 3rem;
+}
+
+.form-wrapper {
+  max-width: 400px;
+  margin: auto;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.create-account {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.create-account a {
+  color: #2962ff;
+  text-decoration: none;
+}
+
+.signin-btn {
+  background-color: #333;
+  border: none;
+  font-weight: 500;
+}
+
+.divider {
+  text-align: center;
+  margin: 30px 0 15px;
+  color: #999;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons svg {
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-icons svg:hover {
+  background-color: #f2f2f2;
+}
+
+.image-side {
+  background-color: #fff;
+}
+
+.login-image {
+  max-height: 500px;
+  width: auto;
+}

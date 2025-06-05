@@ -1,0 +1,238 @@
+/* 1. PAGE CONTAINER */
+.home-container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .filter-tab {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.2s;
+  }
+  
+  .filter-tab.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .welcome-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .welcome-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    position: relative;
+  }
+  
+  .welcome-line {
+    width: 40%;
+    height: 2px;
+    background-color: #333;
+  }
+  .line-left{
+    position: absolute;
+    left: 0;
+  }
+  .line-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  
+  
+  /* 3. FILTER NAV */
+  .filter-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .filter-nav span {
+    color: #666;
+  }
+  
+  .filter-nav .active {
+    font-weight: 700;
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  /* 4. CAROUSEL SECTION */
+  .carousel-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-carousel {
+    flex: 2;
+    min-width: 300px;
+    background-color: #f1f1f1;
+    height: 20rem;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .side-frame {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f1f1f1;
+    height: 20rem;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 5. COUNTRY GRID */
+  .country-grid {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  
+  .country-card {
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 2rem 1rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .country-flag {
+    width: 3rem;
+    height: 2rem;
+    background-color: #eee;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+  
+  .country-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .country-name {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .country-region {
+    font-size: 0.875rem;
+    color: #888;
+  }
+  
+  /* 6. LOAD MORE BUTTON */
+  .load-more-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  
+  .load-more-btn:hover {
+    background-color: #000;
+  }
+  .flag-carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .carousel-img-wrapper {
+    height: 250px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flag-img {
+    max-height: 200px;
+    object-fit: contain;
+  }
+/* Carousel Styles */
+.country-carousel {
+  margin: 30px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-flag-container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.carousel-flag {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.carousel-indicators button {
+  background-color: #333;
+}
+    
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;       /* Make them round */
+  background-color: #555;   /* Customize color */
+  margin: 0 5px;
+  border: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #007bff;  /* Active color */
+  transform: scale(1.2);      /* Make active one slightly bigger */
+}
+@media (max-width: 500px) {
+  .country-grid {
+    grid-template-columns: 1fr;
+
+}
+}

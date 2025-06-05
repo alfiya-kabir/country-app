@@ -1,0 +1,152 @@
+.login-container {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .form-side {
+    padding: 3rem;
+  }
+  
+  .form-wrapper {
+    width: 100%;
+    max-width: 17.5rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;  */
+  }
+  
+  .signin-heading {
+    font-size: 2rem;        /* 32px */
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+  }
+  
+  .create-account {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+  
+  .create-account a {
+    color: #2962ff;
+    text-decoration: none;
+  }
+  
+  .custom-input {
+    width: 17rem;         /* 280px */
+    height: 3rem;           /* 48px */
+    margin-bottom: 1rem; 
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .checkbox-container label {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+  
+  .signin-btn {
+    width: 17.5rem;
+    height: 3rem;
+    margin-top: 0.625rem;
+    background-color: #333 !important;
+    border: none;
+    font-weight: 500;
+    color: white;
+    border: none !important;
+  }
+  
+  .divider {
+    text-align: center;
+    color: #999;
+    position: relative;
+    background: #fff;
+    z-index: 1;
+    width: 17.5rem;
+    margin: 1.875rem 0 1.25rem;
+    font-size: 0.875rem;    /* ~14px */
+    line-height: 1.5;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+    z-index: 0;
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons svg {
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons svg:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .image-side {
+    background-color: #fff;
+  }
+  
+  .login-image {
+    max-height: 500px;
+    max-width: 18rem;
+  }
+  
+  @media (max-width: 768px) {
+    .form-wrapper {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+  
+    .custom-input,
+    .signin-btn,
+    .divider {
+      width: 100%;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
