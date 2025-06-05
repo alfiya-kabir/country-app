@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <Container fluid className="login-container">
       <Row className="login-content">
-        <Col md={6} className="form-side">
+        <Col md={7} className="form-side">
           <div className="form-wrapper">
             <h2 className="signin-heading">Sign In</h2>
             <p className="create-account">
@@ -79,7 +79,7 @@ const Login = () => {
         </Col>
 
         <Col
-          md={6}
+          md={5}
           className="image-side d-none d-md-flex align-items-center justify-content-center"
         >
           <img

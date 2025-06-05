@@ -1,14 +1,16 @@
 .login-container {
-    height: 100vh;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-  }
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed from space-between */
+}
+
   
   .login-content {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 1em;
   }
   
   .form-side {
@@ -17,7 +19,7 @@
   
   .form-wrapper {
     width: 100%;
-    max-width: 17.5rem;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     /* align-items: flex-start;  */
@@ -78,7 +80,7 @@
     position: relative;
     background: #fff;
     z-index: 1;
-    width: 17.5rem;
+    width: 25rem;
     margin: 1.875rem 0 1.25rem;
     font-size: 0.875rem;    /* ~14px */
     line-height: 1.5;
@@ -89,7 +91,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    width: 40%;
+    width: 34%;
     height: 1px;
     background: #ddd;
     z-index: 0;
@@ -126,11 +128,6 @@
   
   .image-side {
     background-color: #fff;
-  }
-  
-  .login-image {
-    max-height: 500px;
-    max-width: 18rem;
   }
   
   @media (max-width: 768px) {
