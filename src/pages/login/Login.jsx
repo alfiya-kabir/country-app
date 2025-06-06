@@ -1,27 +1,34 @@
-// src/pages/LoginPage.jsx
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./Login.css";
-import { FaGoogle, FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {login} from '../../features/auth/authSlice'
-import loginImage from '../../assets/login-icon.jpeg';
+import { login } from "../../features/auth/authSlice";
+import loginImage from "../../assets/login-icon.jpeg";
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newErrors = {};
+    if (!username.trim()) {
+      newErrors.username = "Username is required";
+    }
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
     if (!passwordRegex.test(password)) {
-      alert("Password must be 8+ chars, include 1 uppercase, 1 number, 1 symbol");
+      newErrors.password =
+        "Password must be 8+ chars, include 1 uppercase, 1 number, 1 symbol";
+    }
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
+    setErrors({});
 
     dispatch(login({ username }));
     navigate("/home");
@@ -45,6 +52,9 @@ const Login = () => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
+                {errors.username && (
+                  <div className="error-message">{errors.username}</div>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-3">
@@ -55,6 +65,9 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
+                {errors.password && (
+                  <div className="error-message">{errors.password}</div>
+                )}
               </Form.Group>
 
               <Form.Group className="checkbox-container">
@@ -64,16 +77,26 @@ const Login = () => {
                 </Form.Label>
               </Form.Group>
 
-              <Button className="signin-btn w-100" type='submit'>Sign In</Button>
+              <Button className="signin-btn w-100" type="submit">
+                Sign In
+              </Button>
             </Form>
 
             <div className="divider">Or Sign In With</div>
 
             <div className="social-icons">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-google"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-discord"></i>
+              <button className="social-btn">
+                <i className="bi bi-facebook"></i>
+              </button>
+              <button className="social-btn">
+                <i className="bi bi-google"></i>
+              </button>
+              <button className="social-btn">
+                <i className="bi bi-instagram"></i>
+              </button>
+              <button className="social-btn">
+                <i className="bi bi-discord"></i>
+              </button>
             </div>
           </div>
         </Col>
@@ -82,11 +105,7 @@ const Login = () => {
           md={5}
           className="image-side d-none d-md-flex align-items-center justify-content-center"
         >
-          <img
-            src={loginImage}
-            alt="Login visual"
-            className="login-image"
-          />
+          <img src={loginImage} alt="Login visual" className="login-image" />
         </Col>
       </Row>
     </Container>

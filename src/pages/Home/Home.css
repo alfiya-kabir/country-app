@@ -1,4 +1,4 @@
-/* 1. PAGE CONTAINER */
+
 .home-container {
     max-width: 90rem;
     margin: 0 auto;
@@ -153,6 +153,23 @@
     font-size: 0.875rem;
     color: #888;
   }
+  .status-message-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  .status-message {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .status-message.error {
+    color: red;
+    font-weight: 500;
+  }
   
   /* 6. LOAD MORE BUTTON */
   .load-more-btn {
@@ -217,8 +234,8 @@
 .carousel-indicators [data-bs-target] {
   width: 10px !important;
   height: 10px !important;
-  border-radius: 50%;       /* Make them round */
-  background-color: #555;   /* Customize color */
+  border-radius: 50%;       
+  background-color: #555; 
   margin: 0 5px;
   border: none;
   opacity: 0.5;
@@ -227,8 +244,8 @@
 
 .carousel-indicators .active {
   opacity: 1;
-  background-color: #007bff;  /* Active color */
-  transform: scale(1.2);      /* Make active one slightly bigger */
+  background-color: #007bff;  
+  transform: scale(1.2);
 }
 @media (max-width: 500px) {
   .country-grid {
@@ -236,3 +253,36 @@
 
 }
 }
+/* Hide filter-nav by default on mobile */
+.filter-nav {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Only visible on mobile when toggled */
+@media (max-width: 768px) {
+  .filter-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-nav.show {
+    display: flex;
+  }
+
+  .filter-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .top-bar {
+    align-items: flex-start !important;
+  }
+  .welcome-line {
+    width: 100%;
+  }
+}
+
